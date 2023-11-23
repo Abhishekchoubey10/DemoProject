@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Cybrain demo Test Suite" verbose="4" thread-count="4" parallel="tests">
+
+	<listeners>
+		<listener class-name="com.qa.cybraindemo.listeners.ExtentReportListener" />
+
+		<listener class-name="com.qa.cybraindemo.listeners.TestAllureListener" />
+
+		<listener class-name="com.qa.cybraindemo.listeners.AnnotationTransformer" />
+
+
+	</listeners>
+
+
+	<test name="Cybrain demo contact us Page Test">
+	    <parameter name="browser" value="chrome" />
+
+		<classes>
+			<class name="com.qa.cybraindemo.tests.ContactUsPageTest" />
+		</classes>
+		</test>  
+		
+		
+	<!--	<test name=" Home Page Test _ chrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.climatetradecentre.Tests.HomePageTest" />
+		</classes>
+		</test> -->
+	
+
+</suite>
