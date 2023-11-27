@@ -1,5 +1,7 @@
 package com.qa.cybraindemo.factory;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Properties;
 
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -26,7 +28,29 @@ public class OptionsManager {
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			co.setPlatformName("linux");
+			//co.setCapability("enableVNC", true); // this part will add to visualize the test in browser
+			co.setBrowserVersion(prop.getProperty("browserversion"));
 
+			co.setCapability("selenoid:options", new HashMap<String, Object>() {{
+			    /* How to add test badge */
+			    put("name", "Test badge...");
+
+			    /* How to set session timeout */
+			    put("sessionTimeout", "15m");
+
+			    /* How to set timezone */
+			    put("env", new ArrayList<String>() {{
+			        add("TZ=UTC");
+			    }});
+
+			    /* How to add "trash" button */
+			    put("labels", new HashMap<String, Object>() {{
+			        put("manual", "true");
+			    }});
+
+			    /* How to enable video recording */
+			    put("enableVNC", true);
+			}});
 		}
 
 		return co;
@@ -42,6 +66,8 @@ public class OptionsManager {
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			fo.setPlatformName("linux");
+			fo.setCapability("enableVNC", true); // this part will add to visualize the test in browser
+			fo.setBrowserVersion(prop.getProperty("browserversion"));
 		}
 
 		return fo;
