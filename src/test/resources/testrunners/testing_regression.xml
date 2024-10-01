@@ -26,9 +26,9 @@
 		</classes>
 	</test>
 	
-<!--  	<test name="Cybrain demo contact us Page Test in firefox">
+   <!--  <test name="Cybrain demo contact us Page Test in firefox">
 		<parameter name="browser" value="firefox" />
-		<parameter name="browserversion" value="111.0" />
+		<parameter name="browserversion" value="116.0" />
 		<classes>
 			<class name="com.qa.cybraindemo.tests.ContactUsPageTest" />
 		</classes>

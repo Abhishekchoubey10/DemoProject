@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-28T18:06:23 IST" name="Cybrain demo Test Suite" finished-at="2023-11-28T18:07:30 IST" duration-ms="66966">
+    <groups>
+    </groups>
+    <test started-at="2023-11-28T18:06:23 IST" name="Cybrain demo contact us Page Test in Chrome" finished-at="2023-11-28T18:07:30 IST" duration-ms="66966">
+      <class name="com.qa.cybraindemo.tests.ContactUsPageTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.qa.cybraindemo.tests.ContactUsPageTest@64e1377c]" started-at="2023-11-28T18:06:24 IST" name="setup" finished-at="2023-11-28T18:06:31 IST" duration-ms="7850" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[116.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="submitContactusForm()[pri:2, instance:com.qa.cybraindemo.tests.ContactUsPageTest@64e1377c]" started-at="2023-11-28T18:06:31 IST" name="submitContactusForm" finished-at="2023-11-28T18:07:30 IST" duration-ms="58660" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitContactusForm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.cybraindemo.tests.ContactUsPageTest@64e1377c]" started-at="2023-11-28T18:07:30 IST" name="tearDown" finished-at="2023-11-28T18:07:30 IST" duration-ms="224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.cybraindemo.tests.ContactUsPageTest -->
+    </test> <!-- Cybrain demo contact us Page Test in Chrome -->
+  </suite> <!-- Cybrain demo Test Suite -->
+</testng-results>

@@ -66,8 +66,28 @@ public class OptionsManager {
 
 		if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 			fo.setPlatformName("linux");
-			fo.setCapability("enableVNC", true); // this part will add to visualize the test in browser
+			//fo.setCapability("enableVNC", true); // this part will add to visualize the test in browser
 			fo.setBrowserVersion(prop.getProperty("browserversion"));
+			fo.setCapability("selenoid:options", new HashMap<String, Object>() {{
+			    /* How to add test badge */
+			    put("name", "Test badge...");
+
+			    /* How to set session timeout */
+			    put("sessionTimeout", "15m");
+
+			    /* How to set timezone */
+			    put("env", new ArrayList<String>() {{
+			        add("TZ=UTC");
+			    }});
+
+			    /* How to add "trash" button */
+			    put("labels", new HashMap<String, Object>() {{
+			        put("manual", "true");
+			    }});
+
+			    /* How to enable video recording */
+			    put("enableVNC", true);
+			}});
 		}
 
 		return fo;
